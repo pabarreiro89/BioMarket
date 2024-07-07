@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMarket 🥑​</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("images/background.jpg"); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Ajustar la imagen para cubrir todo el cuerpo */
+            background-repeat: no-repeat; /* Evitar que la imagen se repita */
+            font-family: 'Roboto', sans-serif; /* Cambiar la familia de fuente si es necesario */
+            color: #333; /* Cambiar el color de texto si es necesario */
+            padding-top: 50px; /* Ajuste de padding superior */
+        }
+
+        /* Estilos adicionales según sea necesario */
+        header {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el encabezado */
+            padding: 10px 0;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para secciones */
+            padding: 20px;
+            margin-bottom: 20px; /* Margen inferior entre secciones */
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para el pie de página */
+            color: #fff; /* Color de texto para el pie de página */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .social-container {
+            margin-top: 10px; /* Ajuste de margen superior */
+        }
+
+        .social-link {
+            color: #fff; /* Color de los enlaces sociales */
+            margin-right: 10px; /* Espaciado entre enlaces */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para formularios */
+            padding: 20px;
+            margin-top: 20px; /* Margen superior para separar del contenido anterior */
+            border-radius: 10px;
+        }
+
+        /* Estilos para los productos */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px; /* Ajuste de margen superior */
+        }
+
+        .products-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            flex: 1 1 30%;
+            margin: 10px;
+            max-width: 30%; /* Asegura que no se expandan más allá del 30% del contenedor */
+            box-sizing: border-box; /* Incluye el padding y el border en el tamaño total del elemento */
+        }
+
+        .products {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .products-description {
+            font-size: 0.9em;
+        }
+
+        /* Estilos para el formulario de contacto */
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Color de fondo del botón de enviar */
+            color: #fff; /* Color de texto del botón de enviar */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Color de fondo del botón de enviar al pasar el mouse */
+        }
+
+        /* Estilos para el carrusel */
+        #carouselExampleIndicators {
+            margin-top: 20px; /* Ajuste de margen superior */
+        }
+
+        @media (max-width: 768px) {
+            .products-box {
+                flex: 1 1 45%; /* Ajusta el tamaño de los productos en pantallas medianas */
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .products-box {
+                flex: 1 1 100%; /* Ajusta el tamaño de los productos en pantallas pequeñas */
+                max-width: 100%;
+            }
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="https://biomarket-app.netlify.app/">Ir a TuCheckList</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>BioMarket</h1>
+        <p>Soluciones alimenticias para tu vida.</p>
+        <!-- Carrusel Imagenes -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p> En BioMarket nos apasiona ofrecer a nuestros clientes la mejor selección de alimentos saludables y productos orgánicos. Ubicados en el corazón de Córdoba Capital, nuestra misión es proporcionar opciones nutritivas y de alta calidad que contribuyan a una vida más sana y equilibrada.</p>
+        <p> Creemos en la importancia de una dieta balanceada y en el poder de la alimentación para mejorar la calidad de vida.</p>
+        <p> Ofrecemos una amplia variedad de productos, incluyendo frutas y verduras frescas, alimentos orgánicos, productos sin gluten, y opciones veganas y vegetarianas.
+        Además, ofrecemos a nuestros clientes la posibilidad de armar su propio listado de compras a través de nuestra aplicación, facilitando una experiencia de compra personalizada y cómoda.</p>
+    </section>
+
+    <section id="products">
+        <h2>Productos</h2>
+        <div class="products-container">
+            <div class="products-box">
+                <div class="products">Congelados</div>
+                <div class="products-description">Disfruta de una combinación vibrante de vegetales orgánicos congelados, perfectos para tus comidas rápidas y saludables.</div>
+            </div>
+            <div class="products-box">
+                <div class="products">Sin TACC</div>
+                <div class="products-description">Descubre nuestra amplia gama de productos sin TACC, diseñados especialmente para quienes buscan opciones libres de gluten sin comprometer el sabor ni la calidad.</div>
+            </div>
+            <div class="products-box">
+                <div class="products">Saludables</div>
+                <div class="products-description">Explora nuestra selección de productos saludables y naturales, cuidadosamente elaborados para promover tu bienestar y salud.</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="service">Productos de Interés:</label>
+            <select id="service" name="service" required>
+                <option value="">Selecciona una opción</option>
+                <option value="desarrollo">Congelados</option>
+                <option value="consultoria">Sin TACC</option>
+                <option value="soporte">Saludables</option>
+            </select>
+            
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter"> Suscribirme al boletín
+            </label>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-container">
+            <a href="https://facebook.com" target="_blank" class="social-link">Facebook</a>
+            <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
+            <a href="https://instagram.com" target="_blank" class="social-link">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 BioMarket. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
